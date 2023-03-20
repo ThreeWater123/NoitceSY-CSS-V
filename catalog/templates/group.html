@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}      
+            <h1>选择群组</h1>
+        {% if group_list %}
+            {%for group in group_list%}
+                <li>
+                <a href="{% url 'catalog:group_detail' group.slug %}">{{ group.name }}</a> 
+            </li>
+            {% endfor %}
+        {%else%}
+        <p>没有群组</p>
+
+        {%endif%}
+        {% endblock content %}   
+
+      
+
+
+
+
+
+
+
+
+
+</html>

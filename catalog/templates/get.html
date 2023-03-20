@@ -1,0 +1,28 @@
+<!DOCTYPE = html>
+
+<html>  
+        <head>
+            <meta charset="utf-8">
+            <title>校园通知系统</title>
+        </head>
+        <body>
+            <pre id="API"></pre>
+            {% comment %} <p>{{group.name}}</p>
+
+            <p>{{group.notice}}</p>
+            <p>{{group.date}}</p> {% endcomment %}
+    
+        </body>
+        <script>
+            var Data = JSON.stringify({group:"{{group.name}}",ntc:"{{group.notice}}",date:"{{group.date}}"})
+            document.getElementById("API").innerHTML=Data;
+        </script>
+</html>
+
+
+    
+  
+            
+
+
+

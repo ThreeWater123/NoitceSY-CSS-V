@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content%}
+<h1>{{group.name}}</h1>
+<p>{{group.notice}}</p>
+ <p>更新日期:{{group.date}}</p> 
+{% comment %} <p>{{group.get_update_url}}</p> {% endcomment %}
+
+<a href="{{group.get_update_url}}">
+    <button>修改通知</button>
+    <a href="{% url 'catalog:delete' object.slug%}"><button>删除群组</button></a>
+</a>
+{% endblock%}
